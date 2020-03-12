@@ -1,3 +1,5 @@
+Simple weather app, where the user is able to see the current weather at the user's location and search for different locations' weather. The app includes 3 days forecast and details about the given location's weather. I used React Hooks for creating this application.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
