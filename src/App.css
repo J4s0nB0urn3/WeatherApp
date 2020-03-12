@@ -1,38 +1,198 @@
-.App {
+body{
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 900;
+  font-size: 1.4rem;
+  background-color: #e6f3ff;
+  scroll-behavior: auto;
+}
+
+.content {
+  width: 40vw;
+  position: relative;
+  left: 10vw;
   text-align: center;
+  padding: 0 10vw 0 10vw;
+  margin: 1vh 10vw 0 10vw;
+  /* border: 2px solid black; */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.first-content {
+  color: white;
+  height: 54vh;
+  border-style: ridge;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  /* border: 2px solid black; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.w-icon {
+  position: relative;
+  bottom: 3vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.home-button {
+  height: 1.4rem;
+  width: auto;
+}
+
+.forecast {
+  position: relative;
+  background-color: #66ccff;
+  /* border: 2px solid black; */
+  overflow: hidden;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.week, .details {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
+  border-style: ridge;
+  border-top: none;
 }
 
-.App-link {
-  color: #61dafb;
+.week {
+  height: 25vh;
+  /* border: 2px solid black; */
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.day {
+  position: relative;
+  padding: 1vh 2vw 0 2vw;
+  height: 27vh;
+}
+
+.detail {
+    position: relative;
+    padding: 1vh 2vw 0 2vw;
+    /* border: 2px solid black; */
+    height: 15vh;
+    bottom: 1vh;
+}
+
+.loading-page {
+  height: 70vh;
+  width: 50vw;
+  position: absolute;
+  left: 35vw;
+  top: 40vh;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.img {
+  position: absolute;
+  bottom: 60vh;
+  height: 50vh;
+  width: auto;
+}
+
+.page1, .page2, .page3, .page4, .page5, .page6, .page7 {
+  animation: drop 1s infinite;
+  animation-timing-function: linear;
+  margin: 1vw;
+  font-size: 3rem;
+  color: #0099ff;
+  font-weight: 900;
+  top: 10vh;
+}
+
+.page1 {
+  position: relative;
+  display: inline-block;
+  animation-delay: 0s;
+}
+
+.page2 {
+  position: relative;
+  display: inline-block;
+  animation-delay: 0.3s;
+}
+
+.page3 {
+  position: relative;
+  display: inline-block;
+  animation-delay: 0.1s;
+}
+
+.page4 {
+  position: relative;
+  display: inline-block;
+  animation-delay: 0.3s;
+}
+
+.page5 {
+  position: relative;
+  display: inline-block;
+  animation-delay: 0.2s;
+}
+
+.page6 {
+  position: relative;
+  display: inline-block;
+  animation-delay: 0.5s;
+}
+
+.page7 {
+  position: relative;
+  display: inline-block;
+  animation-delay: 0.1s;
+}
+
+@keyframes drop {
+  0% {
+    transform: translateY(-10vh);
+    opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: translateY(0);
+    opacity: 1;
   }
+
+  100% {
+    transform: translateY(10vh);
+    opacity: 0;
+  }
+}
+
+h3 {
+  position: absolute;
+  left: 3vw;
+  top: -10vh;
+}
+
+.input {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1rem;
+  margin: 0.5vw 1vw 0 1vw;
+  width: 13vw;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.button:focus, .detail-button:focus, .forecast-button:focus {
+  outline: none;
+}
+
+.button, .forecast-button, .detail-button {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1rem;
+  font-weight: 900;
+  padding: 1vh;
+  margin: 1vh;
+  border-radius: 2vh;
+  background-color: #3399ff;
+  color: white;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.forecast-button, .detail-button {
+  bottom: 8.5vh;
 }
